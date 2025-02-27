@@ -1,1 +1,0 @@
-CSS from : [text](https://medium.com/@kshitijsharma94/building-a-simple-calculator-with-html-css-and-javascript-1bda25ce3d80)
