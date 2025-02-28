@@ -24,7 +24,7 @@ buttons.forEach(button => {
 function appendToDisplay(value){
     currentInput += value;
     display.value = currentInput;
-    console.log(currentInput);
+    // console.log(currentInput);
 }
 // Clear the display
 function clearDisplay(){
@@ -36,18 +36,19 @@ function calculateResult(){
     try{
         const result = parseAndCalculate(currentInput); //Parse the input and calculate the result
         display.value =result;
-        console.log("The result is before converting into-",typeof(result));
+        // console.log("The result is before converting into-",typeof(result));
         currentInput =result.toString();
-        console.log("Post converting -",typeof(currentInput))
+        // console.log("Post converting -",typeof(currentInput));
     }catch(error){
-        display.value = 'Error';
+        display.value = error.message;
+        currentInput="";
     }
 }
 //Parse and calculate the result
 function parseAndCalculate(input){
     const tokens = input.split(/([\+\-\*\/])/); //Split input into numbers and operators
     const numbers = []; //Store numbers
-    console.log(tokens, numbers);
+    console.log("Tokens are: ",tokens);
     const operators = []; //Store operators
 
     //Parse tokens into numbers and operators
@@ -60,7 +61,7 @@ function parseAndCalculate(input){
         }
     }
     //Performing multiplication and division
-    for(let i=0; i <operators.length; i++){
+    for(let i=0; i < operators.length; i++){
         if(operators[i] === '*' || operators[i]=== '/'){
             const num1 = numbers[i];
             const num2 = numbers[i+1];
@@ -71,8 +72,14 @@ function parseAndCalculate(input){
                 result = num1 * num2;
             }
             else if(operator === '/'){
-                result = num1 / num2;
+                if(num2 != 0){
+                    result = num1 / num2;
+                }
+                else{
+                    throw new error ("Cannot divide by zero");
+                }
             }
+            
             // Replace the numbers and operators with the result
             numbers.splice(i, 2, result);
             operators.splice(i, 1);
