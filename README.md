@@ -3,8 +3,9 @@
 **A simple calculator web application built using HTML, CSS, and JavaScript. This project provides basic arithmetic operations such as addition, subtraction, multiplication, and division.**
 
 **Screenshot**
-![alt text](image.png)
-![alt text](image-1.png)
+
+    ![alt text](image.png)
+    ![alt text](image-1.png)
 
 *Features*
     1.Perform basic arithmetic operations (+, -, *, /)
@@ -20,17 +21,17 @@
 
 *Installation*
 
-Clone this repository:
+    Clone this repository:
 
-git clone [text](https://github.com/jaysreeb/Calculator.git)
+    git clone [text](https://github.com/jaysreeb/Calculator.git)
 
 *Usage*
 
-Click on the numbers and operators to perform calculations.
+    Click on the numbers and operators to perform calculations.
 
-Press the "=`" button to display the result.
+    Press the "=`" button to display the result.
 
-Use the "C" button to clear the screen.
+    Use the "C" button to clear the screen.
 
 
 **Future Enhancements**
@@ -43,11 +44,11 @@ Use the "C" button to clear the screen.
 
 **Contributing**
 
-Contributions are welcome! Feel free to fork this repository and submit pull requests.
+    Contributions are welcome! Feel free to fork this repository and submit pull requests.
 
 *License*
 
-This project is licensed under the MIT License.
+    This project is licensed under the MIT License.
 
 *Acknowledgments*
 
