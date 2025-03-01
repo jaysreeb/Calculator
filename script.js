@@ -76,7 +76,7 @@ function parseAndCalculate(input){
                     result = num1 / num2;
                 }
                 else{
-                    throw new error ("Cannot divide by zero");
+                    throw new Error ("Cannot divide by Zero");
                 }
             }
             
